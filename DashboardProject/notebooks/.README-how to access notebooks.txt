@@ -1,0 +1,13 @@
+[Cody Jones, 3/1/2022]
+Instructions for accessing notebooks
+1. cd  into dashboardproject
+cd C:\Users\blade\Documents\Dashboard\DashboardProject
+2. Activate virtual environment (VE) from this directory
+project\dashboard_venv\Scripts\activate.bat
+3. With VE opened, access the notebooks
+py -m notebook
+4. Access the notebook desired. Notebooks not labeled "with instructions" have removed the instruction to give
+   program more flow
+
+
+Example of raw data: https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_US.csv
