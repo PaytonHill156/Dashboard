@@ -11,3 +11,5 @@ py -m notebook
 
 
 Example of raw data: https://raw.githubusercontent.com/CSSEGISandData/COVID-19/master/csse_covid_19_data/csse_covid_19_time_series/time_series_covid19_confirmed_US.csv
+
+Got all data, wrote instructions for accessing jupyter notebooks and the data
