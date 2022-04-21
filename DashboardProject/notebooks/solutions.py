@@ -1,5 +1,8 @@
 import numpy as np
 import pandas as pd
+import statsmodels.api as sm
+import statsmodels.formula.api as smf
+
 
 DOWNLOAD_URL = (
     "https://raw.githubusercontent.com/CSSEGISandData/COVID-19/"
