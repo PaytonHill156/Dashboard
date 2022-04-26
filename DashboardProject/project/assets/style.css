@@ -8,8 +8,8 @@
     They are accessed by var(--text-color)
 */
 :root {
-    --text-color: #798d8f;
-    --tab-color: #212529;
+    --text-color: #c8b7a6;
+    --tab-color: #16123f;
 }
 
 /* Add background color to entire app */

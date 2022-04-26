@@ -388,46 +388,6 @@ def create_map(group, radio_value):
 # nice bootstrap components such as navbars and cards specifically for dash
 
 
-def create_navbar():
-    """
-    Creates the navigation bar at the top of the page
-
-    Returns
-    -------
-    A navigation bar from dash_bootstrap_components
-    """
-    nav_items = dbc.Nav(
-        [
-            dbc.NavItem(dbc.NavLink("Coronavirus Dashboard", href="/")),
-            dbc.NavItem(
-                dbc.NavLink(
-                    "Learn How to Build this Dashboard",
-                    href=THIS_COURSE_URL,
-                    target="_blank",
-                )
-            ),
-        ],
-        navbar=True,
-    )
-
-    return dbc.Navbar(
-        [
-            html.A(
-                dbc.Row(
-                    [dbc.Col(html.Img(src="assets/dark_logo.png", height="30px"))],
-                    align="center",
-                    no_gutters=True,
-                ),
-                href=HOME_URL,
-                target="_blank",
-            ),
-            dbc.NavbarToggler(id="navbar-toggler"),
-            dbc.Collapse(nav_items, id="navbar-collapse", navbar=True),
-        ],
-        color="primary",
-        dark=True,
-    )
-
 
 def create_main_page():
     """
@@ -604,9 +564,8 @@ def create_main_page():
 ############################# Final Layout ##################################
 # Place the navbar and container into a single div and set the final layout
 
-navbar = create_navbar()
 container = create_main_page()
-app.layout = html.Div([navbar, container])
+app.layout = html.Div([container])
 
 
 ################################## Callbacks ##################################
@@ -700,19 +659,6 @@ def change_map(group, radio_value):
     radio_value: One of four string values of the selected radio button
     """
     return create_map(group, radio_value)
-
-
-# Necessary for toggling navbar collapse on small screens
-# https://dash-bootstrap-components.opensource.faculty.ai/docs/components/navbar/
-@app.callback(
-    Output("navbar-collapse", "is_open"),
-    [Input("navbar-toggler", "n_clicks")],
-    [State("navbar-collapse", "is_open")],
-)
-def toggle_navbar_collapse(n, is_open):
-    if n:
-        return not is_open
-    return is_open
 
 
 if __name__ == "__main__":
